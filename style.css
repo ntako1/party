@@ -23,12 +23,14 @@ img {
 .maps h1{
     color: rgb(126, 26, 26);
 
+
 }
 
 .raccon{
     background-color: black;
     text-align: center;
        }
+
 
 
 
@@ -117,6 +119,10 @@ img {
     -webkit-animation: falling-right linear ;
     animation: falling-right linear;
    }
+
+
+
+
 
 @media screen and (max-width: 600px) {
     .maps iframe {
