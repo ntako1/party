@@ -1,0 +1,120 @@
+body, html {
+    background-color: rgba(245, 204, 218, 1); /* Background color */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.maps {
+    text-align: center; /* Center the content horizontally */
+    margin-top: 5px; /* Add space between the image and the iframe */
+}
+.maps h1{
+    color: rgb(126, 26, 26);
+
+}
+
+
+#confetti {
+    left: 0;
+    position: fixed;
+    right: 0; 
+    top: -160px;
+    z-index: 10000;
+   }
+    
+   #confetti .ball {
+    animation-iteration-count :infinite !important;
+    -webkit-animation-iteration-count :infinite !important;
+    border-radius: 50%;
+    cursor: default;
+    display: inline-block;
+    height: 10px;
+    user-select: none; 
+    -webkit-user-select: none; 
+    width: 10px;
+   } 
+    
+   @-webkit-keyframes falling-left {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 1;}
+    10% { opacity: 0;}
+    20% { opacity: 1;}
+    30% { opacity: 0;}
+    40% { opacity: 1;}
+    50% { opacity: 0;}
+    60% { opacity: 1;}
+    70% { opacity: 0;}
+    80% { opacity: 1;}
+    90% { opacity: 0;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 1;}
+   }
+    
+   @keyframes falling-left {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 1;}
+    10% { opacity: 0;}
+    20% { opacity: 1;}
+    30% { opacity: 0;}
+    40% { opacity: 1;}
+    50% { opacity: 0;}
+    60% { opacity: 1;}
+    70% { opacity: 0;}
+    80% { opacity: 1;}
+    90% { opacity: 0;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 1;}
+   }
+    
+   #confetti .ball:nth-child(2n) {
+    -webkit-animation: falling-left linear;
+    animation: falling-left linear ;
+   }
+    
+   @-webkit-keyframes falling-right {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 0;}
+    10% { opacity: 1;}
+    20% { opacity: 0;}
+    30% { opacity: 1;}
+    40% { opacity: 0;}
+    50% { opacity: 1;}
+    60% { opacity: 0;}
+    70% { opacity: 1;}
+    80% { opacity: 0;}
+    90% { opacity: 1;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 0;}
+   }
+    
+   @keyframes falling-right {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 1;}
+    10% { opacity: 0;}
+    20% { opacity: 1;}
+    30% { opacity: 0;}
+    40% { opacity: 1;}
+    50% { opacity: 0;}
+    60% { opacity: 1;}
+    70% { opacity: 0;}
+    80% { opacity: 1;}
+    90% { opacity: 0;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 0;} 
+   }
+    
+   #confetti .ball:nth-of-type(2n+1) {
+    -webkit-animation: falling-right linear ;
+    animation: falling-right linear;
+   }
+
+@media screen and (max-width: 600px) {
+    .maps iframe {
+        width: 100%; /* Make the iframe width 100% of the container */
+        height: 200px; /* Adjust height as needed */
+    }
+}
